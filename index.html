@@ -26,6 +26,7 @@
   const cols = Math.floor(canvas.width / 25) + 1;
   const ypos = Array(cols).fill(0);
 
+  const label = 'CONTEK';
   function matrix() {
     ctx.fillStyle = '#0001';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -33,14 +34,18 @@
     ctx.fillStyle = '#0f0';
     ctx.font = '20pt monospace';
 
+    let labelCount = -1;
     ypos.forEach((y, index) => {
+      if (labelCount == -1 && Math.floor(Math.random() * 500) == 0) {
+        labelCount = 0;
+      }
       let text;
-      if (Math.floor(Math.random() * 1000) == 0) {
-        ctx.fillStyle = '#f00';
-        text = 'CONTEK'
-      } else {
+      if (labelCount < 0 || labelCount >= label.length) {
         ctx.fillStyle = '#0f0';
         text = String.fromCharCode(Math.random() * 256);
+      } else {
+        ctx.fillStyle = '#f00';
+        text = label[labelCount++];
       }
       const x = index * 25;
       ctx.fillText(text, x, y);
