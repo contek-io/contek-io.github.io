@@ -22,17 +22,13 @@
   const canvas = document.getElementById('canv');
   const ctx = canvas.getContext('2d');
 
-  const w = canvas.width = document.body.offsetWidth;
-  const h = canvas.height = document.body.offsetHeight;
-  const cols = Math.floor(w / 25) + 1;
+  resize();
+  const cols = Math.floor(canvas.width / 25) + 1;
   const ypos = Array(cols).fill(0);
-
-  ctx.fillStyle = '#000';
-  ctx.fillRect(0, 0, w, h);
 
   function matrix() {
     ctx.fillStyle = '#0001';
-    ctx.fillRect(0, 0, w, h);
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.fillStyle = '#0f0';
     ctx.font = '20pt monospace';
@@ -44,7 +40,7 @@
         text = 'CONTEK'
       } else {
         ctx.fillStyle = '#0f0';
-        text = String.fromCharCode(Math.random() * 128);
+        text = String.fromCharCode(Math.random() * 256);
       }
       const x = index * 25;
       ctx.fillText(text, x, y);
@@ -57,8 +53,8 @@
   }
 
   function resize() {
-    canvas.width  = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = document.body.offsetWidth;
+    canvas.height = document.body.offsetHeight;
   }
 
   setInterval(matrix, 60);
