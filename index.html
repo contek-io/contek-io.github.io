@@ -1,1 +1,67 @@
-Hello, world!
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Welcome to CONTEK</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      width: 100vw;
+      background: #000;
+    }
+  </style>
+
+</head>
+
+<body onresize="resize()">
+<canvas id="canv" width="500" height="200"></canvas>
+<script>
+  const canvas = document.getElementById('canv');
+  const ctx = canvas.getContext('2d');
+
+  const w = canvas.width = document.body.offsetWidth;
+  const h = canvas.height = document.body.offsetHeight;
+  const cols = Math.floor(w / 15) + 1;
+  const ypos = Array(cols).fill(0);
+
+  ctx.fillStyle = '#000';
+  ctx.fillRect(0, 0, w, h);
+
+  function matrix() {
+    ctx.fillStyle = '#0001';
+    ctx.fillRect(0, 0, w, h);
+
+    ctx.fillStyle = '#0f0';
+    ctx.font = '20pt monospace';
+
+    ypos.forEach((y, index) => {
+      let text;
+      if (Math.floor(Math.random() * 1000) == 0) {
+        ctx.fillStyle = '#f00';
+        text = 'CONTEK'
+      } else {
+        ctx.fillStyle = '#0f0';
+        text = String.fromCharCode(Math.random() * 128);
+      }
+      const x = index * 20;
+      ctx.fillText(text, x, y);
+      if (y > 100 + Math.random() * 10000) {
+        ypos[index] = 0;
+      } else {
+        ypos[index] = y + 20;
+      }
+    });
+  }
+
+  function resize() {
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  setInterval(matrix, 60);
+</script>
+</body>
+</html>
