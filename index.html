@@ -24,7 +24,7 @@
 
   const w = canvas.width = document.body.offsetWidth;
   const h = canvas.height = document.body.offsetHeight;
-  const cols = Math.floor(w / 15) + 1;
+  const cols = Math.floor(w / 25) + 1;
   const ypos = Array(cols).fill(0);
 
   ctx.fillStyle = '#000';
@@ -46,12 +46,12 @@
         ctx.fillStyle = '#0f0';
         text = String.fromCharCode(Math.random() * 128);
       }
-      const x = index * 20;
+      const x = index * 25;
       ctx.fillText(text, x, y);
       if (y > 100 + Math.random() * 10000) {
         ypos[index] = 0;
       } else {
-        ypos[index] = y + 20;
+        ypos[index] = y + 25;
       }
     });
   }
