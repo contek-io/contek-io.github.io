@@ -14,7 +14,7 @@ const Navbar = () => {
       <nav
         id='nav-menu-desktop'
         aria-label='Navigation for Desktop'
-        className='flex w-full bg-black md:px-20 md:py-6 justify-between items-center px-6 py-4 md:fixed md:top-0'
+        className='flex w-full bg-black md:px-20 md:py-6 justify-between items-center px-6 py-4 md:fixed md:top-0 md:z-10'
       >
         <div className='flex items-center'>
           <a

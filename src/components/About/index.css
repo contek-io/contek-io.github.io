@@ -1,0 +1,43 @@
+.decorate {
+  flex: 0 0 auto;
+  width: 400px;
+  animation: updown 3s ease-in-out infinite;
+  -webkit-animation: updown 3s ease-in-out infinite;
+}
+
+@keyframes updown {
+  0% {
+    transform: translate(0px, 10px);
+  }
+  50% {
+    transform: translate(0px, -10px);
+  }
+  100% {
+    transform: translate(0px, 10px);
+  }
+}
+
+/*Safari and Chrome:*/
+@-webkit-keyframes updown {
+  0% {
+    transform: translate(0px, 10px);
+  }
+  50% {
+    transform: translate(0px, -10px);
+  }
+  100% {
+    transform: translate(0px, 10px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .decorate {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1024px) {
+  .decorate {
+    width: 300px;
+  }
+}
