@@ -1,0 +1,23 @@
+.menu-open {
+  position: absolute;
+  top: 0;
+}
+.menu-closed {
+  display: none;
+}
+#anchor-links a {
+  margin-left: 88px;
+}
+
+#careers {
+  background: linear-gradient(96.34deg, #2b4dff 0%, #0022d5 100%);
+  border-radius: 6px;
+  width: 120px;
+  height: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+  #anchor-links a {
+    margin-left: 40px;
+  }
+}
