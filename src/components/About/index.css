@@ -1,8 +1,47 @@
+.wrapper {
+  display: flex;
+}
+.wrapper div div {
+  float: right;
+  height: 100%;
+  margin-left: 15px;
+  display: flex;
+  align-items: flex-end;
+  shape-outside: inset(calc(100% - 100px) 0 0);
+  width: 100px;
+  animation: updown_small 2s ease-in-out infinite;
+  -webkit-animation: updown_small 2s ease-in-out infinite;
+}
 .decorate {
   flex: 0 0 auto;
   width: 400px;
   animation: updown 2s ease-in-out infinite;
   -webkit-animation: updown 2s ease-in-out infinite;
+}
+
+@keyframes updown_small {
+  0% {
+    transform: translate(0px, 6px);
+  }
+  50% {
+    transform: translate(0px, -6px);
+  }
+  100% {
+    transform: translate(0px, 6px);
+  }
+}
+
+/*Safari and Chrome:*/
+@-webkit-keyframes updown_small {
+  0% {
+    transform: translate(0px, 6px);
+  }
+  50% {
+    transform: translate(0px, -6px);
+  }
+  100% {
+    transform: translate(0px, 6px);
+  }
 }
 
 @keyframes updown {

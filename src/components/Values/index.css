@@ -1,3 +1,9 @@
+.feature_decorate {
+  display: inline-block;
+  border-radius: 1px;
+  background-color: #2b4dff;
+}
+
 .features {
   flex: 0 0 auto;
   width: 480px;

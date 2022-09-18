@@ -15,7 +15,7 @@ const Footer = () => {
           </span>
           <span className='whitespace-pre text-sm'>{ALL_RIGHTS_RESERVED}</span>
         </div>
-        <div className='md:grid md:grid-cols-3 gap-0 md:gap-10 2xl:gap-32 xl:gap-20 lg:gap-12 w-full md:w-auto flex justify-between'>
+        <div className='md:grid md:grid-cols-3 gap-0 w-full md:w-auto flex justify-between md:flex-auto'>
           {FOOTER_LINKS.map((links, index) => {
             return (
               <div key={`links-${index}`}>
