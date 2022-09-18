@@ -6,7 +6,7 @@ import { JOIN_US_DESC, JOIN_US_TITLE } from '@/constants';
 import { DESC_CLASS, TITLE_CLASS } from '@/styles';
 const Jobs = () => {
   return (
-    <p
+    <div
       id='find_us'
       className='md:py-32 px-20 py-16 w-full flex flex-col items-center'
     >
@@ -15,7 +15,7 @@ const Jobs = () => {
         {JOIN_US_DESC}
       </p>
       <CareersButton className='jobs_careers' />
-    </p>
+    </div>
   );
 };
 

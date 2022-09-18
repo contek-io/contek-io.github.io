@@ -1,3 +1,5 @@
+import { Fragment } from 'react';
+
 import { ReactComponent as Logo } from '@/assets/logo.svg';
 import { ALL_RIGHTS_RESERVED, FOOTER_LINKS } from '@/constants';
 import { DESC_CLASS } from '@/styles';
@@ -16,13 +18,13 @@ const Footer = () => {
         <div className='md:grid md:grid-cols-3 gap-0 md:gap-10 2xl:gap-32 xl:gap-20 lg:gap-12 w-full md:w-auto flex justify-between'>
           {FOOTER_LINKS.map((links, index) => {
             return (
-              <p key={`links-${index}`}>
+              <div key={`links-${index}`}>
                 <div className={`${DESC_CLASS} font-bold mb-4 md:mb-10`}>
                   {links.title}
                 </div>
-                {links.details.map((link) => {
+                {links.details.map((link, lIndex) => {
                   return (
-                    <>
+                    <Fragment key={`link-${index}-${lIndex}`}>
                       {link.name && (
                         <div
                           className={`xl:text-lg lg:text-base md:text-sm text-xs  mb-2 md:mb-4`}
@@ -35,10 +37,10 @@ const Footer = () => {
                           {link.icon}
                         </div>
                       ) : null}
-                    </>
+                    </Fragment>
                   );
                 })}
-              </p>
+              </div>
             );
           })}
         </div>

@@ -14,18 +14,18 @@ const Values = () => {
         <p className='2xl:mr-52 xl:mr-30 lg:mr-20 md:mr-10'>
           <span className={`${DESC_CLASS}`}>{VALUE_DESC}</span>
         </p>
-        <p className='features mb-16 md:mb-20 xl:mb-32 2xl:mb-40'>
+        <div className='features mb-16 md:mb-20 xl:mb-32 2xl:mb-40'>
           {FEATURES.map((feature, index) => {
             return (
-              <p key={`feature_${index}`} className='mb-10'>
+              <div key={`feature_${index}`} className='mb-10'>
                 <span className={`${DESC_CLASS} block font-bold mb-4`}>
                   {feature.title}
                 </span>
                 <span className={`${DESC_CLASS}`}>{feature.desc}</span>
-              </p>
+              </div>
             );
           })}
-        </p>
+        </div>
       </div>
       {/* mobile */}
       <div className='md:hidden'></div>

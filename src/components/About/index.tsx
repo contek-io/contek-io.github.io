@@ -11,10 +11,10 @@ const About = () => {
         id='about_desktop'
         className='md:flex md:justify-between md:items-center hidden'
       >
-        <p className='2xl:mr-48 xl:mr-40 lg:mr-25 md:mr-20'>
+        <div className='2xl:mr-48 xl:mr-40 lg:mr-25 md:mr-20'>
           <div className={`${TITLE_CLASS} mb-8`}>{ABOUT_TITLE}</div>
           <span className={`${DESC_CLASS}`}>{ABOUT_DESC}</span>
-        </p>
+        </div>
         <div className='decorate'>
           <img src={aboutDecorate}></img>
         </div>

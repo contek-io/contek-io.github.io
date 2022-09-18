@@ -1,6 +1,17 @@
 .menu-open {
   position: absolute;
-  top: 0;
+  right: 0;
+  left: 0;
+  background-color: black;
+  z-index: 2;
+  font-size: 10px;
+  line-height: 12px;
+  padding-bottom: 24px;
+}
+.menu-open a {
+  display: block;
+  text-align: center;
+  margin-top: 16px;
 }
 .menu-closed {
   display: none;

@@ -5,6 +5,7 @@ import './index.css';
 import CareersButton from '@/components/CareersButton';
 
 import { ReactComponent as Logo } from '@/assets/logo.svg';
+import { ReactComponent as MenuLogo } from '@/assets/menu.svg';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -40,7 +41,7 @@ const Navbar = () => {
           }}
           className='md:hidden justify-self-end'
         >
-          {isOpen ? 'Close' : 'Menu'}
+          <MenuLogo />
         </div>
       </nav>
       <nav
@@ -48,9 +49,23 @@ const Navbar = () => {
         aria-label='Navigation for mobile'
         className={isOpen ? 'menu-open' : 'menu-closed'}
       >
-        <a href='#top'>About</a>
-        <a href='#team'>Team</a>
-        <a href='#find_us'>Find us</a>
+        <a href='#about' onClick={toggleMenu}>
+          About
+        </a>
+        <a href='#team' onClick={toggleMenu}>
+          Team
+        </a>
+        <a href='#find_us' onClick={toggleMenu}>
+          Find us
+        </a>
+        <a
+          onClick={() => {
+            window.open('https://baidu.com');
+            toggleMenu();
+          }}
+        >
+          Careers
+        </a>
       </nav>
     </>
   );
