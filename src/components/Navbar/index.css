@@ -9,9 +9,7 @@
   margin-left: 88px;
 }
 
-#careers {
-  background: linear-gradient(96.34deg, #2b4dff 0%, #0022d5 100%);
-  border-radius: 6px;
+.sm-careers {
   width: 120px;
   height: 40px;
 }

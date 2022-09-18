@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 import './index.css';
 
+import CareersButton from '@/components/CareersButton';
+
 import { ReactComponent as Logo } from '@/assets/logo.svg';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -27,12 +29,10 @@ const Navbar = () => {
           <div id='anchor-links' className='hidden md:flex text-xl font-medium'>
             <a href='#about'>About</a>
             <a href='#team'>Team</a>
-            <a href='#find'>Find us</a>
+            <a href='#find_us'>Find us</a>
           </div>
         </div>
-        <button id='careers' className='hidden md:block font-medium text-xl'>
-          careers
-        </button>
+        <CareersButton className='hidden md:block font-medium text-xl sm-careers' />
         <div
           id='menu-link'
           onClick={() => {
@@ -50,7 +50,7 @@ const Navbar = () => {
       >
         <a href='#top'>About</a>
         <a href='#team'>Team</a>
-        <a href='#find'>Find us</a>
+        <a href='#find_us'>Find us</a>
       </nav>
     </>
   );

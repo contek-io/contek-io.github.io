@@ -15,6 +15,8 @@ const TEAM_TITLE = 'World Class Team';
 const VALUE_TITLE = 'Our Values';
 const VALUE_DESC =
   'Our Values provide the foundation upon which our business is built. They support our vision, shape our culture and reflect the personality of our people. They are the behavioural traits that are inherent in our business - the traits that are special to us, critical to our success and must be kept at all costs. We created these values to describe what was important to us, but you can also look at them through another lens and see them as opposites of the things we try to avoid.';
+const JOIN_US_TITLE = 'Join Us';
+const JOIN_US_DESC = 'Visit our careers page to see current job openings';
 const MEMBER_LIST: Member[] = [
   { img: memberPng, name: 'Cauliflower J.' },
   { img: memberPng, name: 'Cauliflower J.Cauliflower J.Cauliflower J.' },
@@ -49,6 +51,8 @@ export {
   ABOUT_DESC,
   ABOUT_TITLE,
   FEATURES,
+  JOIN_US_DESC,
+  JOIN_US_TITLE,
   MEMBER_LIST,
   TEAM_TITLE,
   VALUE_DESC,
