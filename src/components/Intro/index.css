@@ -1,8 +1,5 @@
-/* #intro {
-  background-image: url(../../assets/intro_bg.png);
-} */
 #intro span {
-  margin: 0 15%;
+  margin: 0 20%;
   text-align: center;
   font-size: 80px;
   line-height: 100px;
@@ -13,6 +10,7 @@
 
 @media screen and (max-width: 768px) {
   #intro span {
+    margin: 0 15%;
     font-size: 28px;
     line-height: 36px;
   }
@@ -20,6 +18,7 @@
 
 @media screen and (max-width: 1280px) and (min-width: 768px) {
   #intro span {
+    margin: 0 15%;
     font-size: 56px;
     line-height: 80px;
   }

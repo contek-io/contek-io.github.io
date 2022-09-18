@@ -1,8 +1,8 @@
 .decorate {
   flex: 0 0 auto;
   width: 400px;
-  animation: updown 3s ease-in-out infinite;
-  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 2s ease-in-out infinite;
+  -webkit-animation: updown 2s ease-in-out infinite;
 }
 
 @keyframes updown {
