@@ -1,17 +1,10 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-
+/** @type {import('tailwindcss').Config} */
+// See https://tailwindcss.com/docs/configuration for details
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
-  theme: {
-    extend: {},
-    screens: {
-      xs: '520px',
-      ...defaultTheme.screens,
-    },
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
+  purge: ["./src/**/*"],
+  content: [
+    "./src/pages/**/*.{js,jsx,ts,tsx}",
+    "./src/components/**/*.{js,jsx,ts,tsx}",
+  ],
+  darkMode: true
 };

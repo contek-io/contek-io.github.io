@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Apercu';
+  src: url('../assets/ApercuMono.ttf');
+}
+
+@font-face {
+  font-family: 'PressStart2P';
+  src: url('../assets/PressStart2P.ttf');
+}
+body {
+  margin: 0;
+  font-family: 'Apercu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+  width: 100vw;
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.gradient-title{
+  background: linear-gradient(to right, rgba(1, 255, 103, 1),rgba(1, 172, 162, 1));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@keyframes cursor-flicker {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-cursor {
+  color: #01ACA2;
+  animation: 1s cursor-flicker infinite;
+}
+
+// .border-button {
+//   border-style: solid;
+//   border-color: white;
+//   border-width: 4px;
+//   border-image-slice: 4;
+//   border-image-width: 4;
+//   border-image-source:url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="8" height="8" xmlns="http://www.w3.org/2000/svg"><path d="M3 1 h1 v1 h-1 z M4 1 h1 v1 h-1 z M2 2 h1 v1 h-1 z M5 2 h1 v1 h-1 z M1 3 h1 v1 h-1 z M6 3 h1 v1 h-1 z M1 4 h1 v1 h-1 z M6 4 h1 v1 h-1 z M2 5 h1 v1 h-1 z M5 5 h1 v1 h-1 z M3 6 h1 v1 h-1 z M4 6 h1 v1 h-1 z" fill="rgb(255,255,255)" /></svg>');
+//   border-image-repeat: stretch;
+//   border-image-outset: 2;
+//   margin: 4px;
+//   position: relative;
+//   background: #000;
+
+//   &::after{
+//     position: absolute;
+//     top: -4px; bottom: -4px;
+//     left: -4px; right: -4px;
+//     background: white;
+//     content: '';
+//     z-index: -1;
+//     border-radius: 16px;
+//   }
+// }
